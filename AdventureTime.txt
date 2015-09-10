@@ -1,0 +1,20 @@
+1.There's not much work to do on the farm, so you have decided to go off and look for work in one of the bigger 
+cities. You arrive at Coding Forest, the road forks out ahead of you, the right path is wide and well travelled 
+while the left looks newer and only slightly smaller. There is a sign post in the middle. One side points to the 
+right to Java City and the left points to Ruby City. Which way do you want to turn?
+1. Right
+2. Left*
+Go to index 2*
+Go to index 3#
+2. You have choosen to try Java City. While the road started out wide, the further you travel the narrower it 
+starts to get. You can see tracks where people have turned around to go back to the crossroads. Do you want to 
+continue on or try Ruby City?
+1. Forge on
+2. Try Ruby City*
+Go to index 4*
+Go to index 3#
+3. You have choosen to try Ruby City. This was fool move, not all that glitters is gold and you became lost and 
+
+hungry, before collapsing on the ground and dying.*
+-1*
+-1#
