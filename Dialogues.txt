@@ -1,19 +1,44 @@
 // < means someone is speaking to player
 // > means player options to reply to someone
+// ¬ means user options are below
 // ¬<number> means move to the next option in the dialogue
 // ¬END means it's last speech, ends the dialog
 
-1<Hello Stranger! - 'You see a man on crutches, he has no left leg'.
+1<Hello Stranger! - 'You see a man on crutches, he has no left leg'.¬
 	1.1>Hello, what do you want?¬2
 	1.2>I have no time for you, get out of my way!¬3
 	1.3>Sorry, I have no time, see you later!¬4
-2<Please bring this letter to my friend, I am disabled and can't walk
+2<Please bring this letter to my friend, I am disabled and can't walk..¬
 	2.1>Okay - 'Take the letter'.¬5
-	2.2>Maybe next time¬6
+	2.2>Maybe next time¬END
 3<Idiot! - 'Smacks you with a crutch'.¬END
-4<Please, I need your help!
+4<Please, I need your help!¬
 	4.1>Okay, what do you want?¬2
 5<Thank you! Goodbye!¬END
-6<See you then!.¬END
 
 
+<num1>SOMEONE SAYS										String[0][0]
+<num1.1>CHARACTER OPTION<moveTo num>	String[0][1]
+<num1.1>CHARACTER OPTION<moveTo num>	String[0][2]
+<num1.1>CHARACTER OPTION<moveTo num>	String[0][3]
+<num1.1>CHARACTER OPTION<moveTo num>	String[0][4]
+
+GENERATE MESSAGE ROUTINE
+accepts option number
+
+IF option is 0, start with initial dialog
+
+IF(at the end is not ¬END)
+	search through dialogue text for chosen option
+
+generate message
+
+IF(after initial message is not ¬END)
+ Generates a string with options and number of options
+
+returns string with message and options
+
+
+
+
+API?
