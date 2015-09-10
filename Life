@@ -1,0 +1,19 @@
+public class Life{
+
+	private String type;
+	private int health;
+	private int attack;
+	private int luck;
+
+	public Life(String type, int hp, int atk, int luck){
+		this.type = type;
+		this.health = hp;
+		this.attack = atk;
+		this.luck = luck;
+	}	
+	
+	public String toString(){
+		return this.type + " , health:" + health + " , attack:" + attack + " , chance:" + luck;
+	}
+
+}
