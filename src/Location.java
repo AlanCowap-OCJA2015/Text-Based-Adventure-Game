@@ -1,5 +1,7 @@
 package nu.xdi.code_challenge.adventure;
 
+import java.util.ArrayList;
+
 /**
  * Define a location in the game.
  */
@@ -10,7 +12,7 @@ class Location extends Node {
 	private ArrayList<Direction> exits;
 
 	Location (String id) {
-		this.id = id;
+		super(id);
 	}
 }
 

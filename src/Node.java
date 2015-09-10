@@ -8,6 +8,10 @@ class Node {
 	private String id;
 	private String description;
 
+	Node (String id) {
+		this.id = id;
+	}
+
 	public void setDescription (String s) {
 		this.description = s;
 	}

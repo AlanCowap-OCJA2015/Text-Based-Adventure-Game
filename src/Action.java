@@ -1,4 +1,5 @@
 package nu.xdi.code_challenge.adventure;
+import java.util.ArrayList;
 
 /**
  * Define an action in the game.
@@ -11,7 +12,7 @@ class Action extends Node {
 	private String needs_noun;
 
 	Action (String id) {
-		this.id = id;
+		super(id);
 	}
 
 }

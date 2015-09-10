@@ -1,5 +1,8 @@
 package nu.xdi.code_challenge.adventure;
 
+import java.util.ArrayList;
+import nu.xdi.code_challenge.adventure.Location;
+
 public class Adventure {
 
 	ArrayList<Location> locations;
