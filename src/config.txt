@@ -1,11 +1,11 @@
 @comment Basic adventure game configuration file
 
-@object_id large_suitcase
+@item_id large_suitcase
 	@description A large suitcase. It looks like it's been through a lot.
 	@name suitcase
 	@name large suitcase
 
-@object_id flickering_bulb
+@item_id flickering_bulb
 	@description A lightbulb
 	@name bulb
 	@name lightbulb
@@ -15,6 +15,7 @@
 
 @action_id go
 	@verb go
+	@needs_noun You need to provide a direction to go to
 
 @action_id inv
 	@verb inv
@@ -22,21 +23,40 @@
 
 @action_id look
 	@verb look
+	@needs_noun You need to provide an item to look at
+
+@action_id quit
+	@verb quit
 
 @direction_id north
+	@name n
 	@description North
 
+@direction_id south
+	@name s
+	@description South
+
+@direction_id east
+	@name e 
+	@description East
+
+@direction_id west
+	@name w
+	@description West
+
 @direction_id doorway_east
+	@name e
 	@description A doorway to the east
 
 @location_id start
 	@description You are in a large, cold room.
-	@exit north, narrow_corridor
-	@exit doorway_east, storage_area
+	@exit north narrow_corridor
+	@exit doorway_east storage_area
+	@item large_suitcase
 
 @location_id narrow_corridor
 	@description You are in a long, dark corridor
 
 @location_id storage_area
 	@description You are in small square room. There is a single, flickering light bulb handing from the ceiling.
-
+	@item flickering_bulb

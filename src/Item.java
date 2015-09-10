@@ -2,15 +2,17 @@ package nu.xdi.code_challenge.adventure;
 import java.util.ArrayList;
 
 /**
- * Define an object in the game.
+ * Define an item in the game.
  */
-class Object extends Node {
+class Item extends Node {
 
 	private ArrayList<Action> actions;
 	private ArrayList<String> names;
 
-	Object (String id) {
+	Item (String id) {
 		super(id);
+		this.actions = new ArrayList<Action>();
+		this.names = new ArrayList<String>();
 	}
 
 }

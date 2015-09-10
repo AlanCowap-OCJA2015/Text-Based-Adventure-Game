@@ -10,6 +10,7 @@ class Direction extends Node {
 
 	Direction (String id) {
 		super(id);
+		this.nouns = new ArrayList<String>();
 	}
 }
 
