@@ -3,7 +3,7 @@
 public class JourneyOfAChampion {
 
 	public static void main( String [] ags ) {
-		JourneyOfAChampiom joac = new JourneyOfAChampiom();
+		JourneyOfAChampion joac = new JourneyOfAChampion();
 		joac.loadGame();
 	}
 
@@ -13,6 +13,11 @@ public class JourneyOfAChampion {
 		System.out.println("\t");
 		System.out.println("\tWelcome to the Journey of a Champion!");
 		System.out.println("\t" + p.toString());
+
+
+		//Loads the file and displays it
+		FileLoader fl = new FileLoader("C:/java/CodeChallengeGame/Dialogues.txt");
+		System.out.println(fl.toString());
 	}
 
 }
