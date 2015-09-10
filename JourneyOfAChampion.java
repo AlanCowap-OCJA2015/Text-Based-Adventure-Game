@@ -25,26 +25,46 @@ public class JourneyOfAChampion {
 		//test dialogue
 		Dialogue dialogue = new Dialogue(fl.toString() , player.getName(), "Stranger");
 		System.out.println(dialogue.getNextMessage());
-		
-		//get user choice
-		System.out.print("Choose an option> ");
-		String inputStr = scan.nextLine();
-		int inputInt = 0;
-		try{
-			inputInt = Integer.parseInt(inputStr);
-		}catch(NumberFormatException nfe){
-			System.out.println("Please choose a valid option..");
-		}
-		
-		//check if chosen option is one of the available in this dialogue branch
-		if(inputInt > 0 && inputInt <= dialogue.getOptionCount()){
-			System.out.println("This is a valid option..");
-		} else {
-			System.out.println("There is no such option..");
-		}
-		
-		
 
+		//start looping the dialogue
+		boolean gameIsOn = true;
+		while(true){
+
+			
+			//get user choice
+			System.out.print("Choose an option> ");
+			String inputStr = scan.nextLine();
+			int inputInt = 0;
+			try{
+				inputInt = Integer.parseInt(inputStr);
+			}catch(NumberFormatException nfe){
+				System.out.println("Please choose a valid option..");
+			}
+			
+			//check if chosen option is one of the available in this dialogue branch
+
+
+			if(inputInt > 0 && inputInt <= dialogue.getOptionCount()){
+				//System.out.println("This is a valid option..");
+			} else {
+				System.out.println("There is no such option..");
+				continue;
+			}
+
+			String temp = dialogue.pickOption(inputInt);
+			if(temp != null){
+				System.out.println(temp);
+			}else{
+				break;
+			}
+			temp = dialogue.getNextMessage();
+			if(temp != null){
+				System.out.println(temp);
+			} else{
+				break;
+			}
+	
+		}
 	}
 
 }
