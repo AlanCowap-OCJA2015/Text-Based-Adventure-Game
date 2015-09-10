@@ -2,9 +2,9 @@
 
 Design a text adventure game which reads its scenarios, layout, activities, etc. from a text file.
 
-# Anlysis
+## Analysis
 
-## What are the minimum required aspects for an adventure?
+### What are the minimum required aspects for an adventure?
 
 * Locations
 * Links between locations
@@ -14,15 +14,15 @@ Design a text adventure game which reads its scenarios, layout, activities, etc.
 * Actions which interact with objects
 * A personal inventory where objects can be stored and carried
 
-## What enhancements can be made?
+### What enhancements can be made?
 
 * NPCs which can stay in a fixed location or move around independently
 * Interactions between the player and NPCs
 * Interactions between NPCs
 
-# Implementation
+## Implementation
 
-## How will the game information be stored in the configuration file?
+### How will the game information be stored in the configuration file?
 
 Proposal: Use @ prefix to define new nodes and as the program parses these in, they will be stored in the correct place according to context.
 
@@ -30,15 +30,15 @@ Within the node configurations, there should be the ability to insert placeholde
 
 e.g. $n for the noun being referred to, $v for the verb, etc.
 
-## Node types:
+### Node types:
 
-### Comments
+#### Comments
 
 @comment - Read in but not stored ===
 
 Blank lines are ignored
 
-### Context identifiers
+#### Context identifiers
 
 There will be four main contexts:
 
@@ -50,7 +50,7 @@ There will be four main contexts:
 
 @location_id - Locations in the game. Their definitions will link to their neighbouring locations on the map.
 
-### Context initialisers
+#### Context initialisers
 
 
 @description - A description for this location, action, item or direction
@@ -88,41 +88,41 @@ There will be four main contexts:
 | @item                    |        |           |      |          |
 | @direction               |        |           |      |          |
 
-### Node hierarchy
+#### Node hierarchy
 
-#### @action_id
+##### @action_id
 
-    @verb - The verb for the player to use to perform this action, i.e. ìGOî, ìLOOKî
+  @verb - The verb for the player to use to perform this action, i.e. ‚ÄúGO‚Äù, ‚ÄúLOOK‚Äù
 
-    @action_description - A descriptive term for this action, e.g. ìyou examine the $nî
+  @action_description - A descriptive term for this action, e.g. ‚Äúyou examine the $n‚Äù
 
-    @action_on_description - Description when doing this action on something
+  @action_on_description - Description when doing this action on something
 
-    @needs_noun - If used, an error message for when verb is used with no noun
+  @needs_noun - If used, an error message for when verb is used with no noun
 
-#### @direction_id
+##### @direction_id
 
-    @description - Description for this direction
+  @description - Description for this direction
 
-    @noun - Nouns to be used by player for this direction, e.g. ìE, EASTî
+  @noun - Nouns to be used by player for this direction, e.g. ‚ÄúE, EAST‚Äù
 
-#### @location_id
+##### @location_id
 
-	@description - The description for this location
+  @description - The description for this location
 
-	@action - Actions available at this location
+  @action - Actions available at this location
 
-	@item - Items initially at this location
+  @item - Items initially at this location
 
-	@direction - A direction out of this location
+  @direction - A direction out of this location
 
-#### @item_id
+##### @item_id
 
-    @name - Identifier for player to use for this item, e.g. ìboxî, ìlarge boxî. Multiple names can be defined, with the program matching the most general one unless more than one is in the current location or inventory.
+  @name - Identifier for player to use for this item, e.g. ‚Äúbox‚Äù, ‚Äúlarge box‚Äù. Multiple names can be defined, with the program matching the most general one unless more than one is in the current location or inventory.
 
-	@description - Description of this object
+  @description - Description of this object
 
-    @actions_on - Actions which can be performed on this item
+  @actions_on - Actions which can be performed on this item
 
-    @actions_with - Actions which can be performed with this item
+  @actions_with - Actions which can be performed with this item
 
