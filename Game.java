@@ -83,8 +83,9 @@ public class Game{
 			if(Player.defense > Life.attack){
 
 				System.out.println("You are stronger and fight off the " + encounters.get(encounterType)
-				+ " ,you only drop 1 health point : " + Player.hp);
-				Player.hp = Player.hp -1;	
+				+ " ,you only drop 1 health point");
+				Player.hp = Player.hp -1;
+				System.out.println("Healthpoints: " + Player.hp);
 			
 			}else{
 
