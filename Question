@@ -1,0 +1,94 @@
+import java.util.ArrayList;
+import java.io.Console;
+
+public class Question{
+
+	private ArrayList<Answer> answerList;
+	private String text;
+	private int id;
+
+	public Question(ArrayList<Answer> answerList, String text, int id){
+
+		this.answerList = answerList;
+		this.text = text;
+		this.id = id;
+		
+	}
+
+
+	private int answerQuestion(int answerNum){
+
+		if(answerNum < 1 || answerNum > answerList.size()){
+			return -1;
+		}else{
+
+			Answer chosen = answerList.get(answerNum - 1);
+			return chosen.getDestID();
+		}
+		
+	}
+
+	public int ask(){
+
+		int dest = -1;
+
+		if(answerList.size() <= 1){
+			System.out.println("////////////////////\n" + this);
+			if(answerList.get(0).getDestID() == 0){
+				return -1;
+			}else{
+				return answerList.get(0).getDestID();
+			}
+		}
+
+		
+
+		Console input = System.console();
+		do{
+			System.out.println("////////////////////\n" + this);
+			String userChoice = input.readLine("Choose an option: ");
+			int userNum = -1;
+		
+			try{
+				userNum = Integer.parseInt(userChoice);
+			}catch(NumberFormatException nfe){
+				System.out.println("Invalid option, try again.");
+				continue;
+			}
+			
+			dest = answerQuestion(userNum);
+			if(dest == -1){
+				System.out.println("Invalid option, try again");
+			}
+			
+		}while(dest == -1);
+
+		return dest;
+
+	}
+
+	public int getID(){
+		return this.id;
+	}
+
+	@Override
+	public String toString(){
+
+		String questionString = "";
+		//questionString += "id: " + id + "\n";
+		
+		questionString += text + "\n";
+		for(int i = 0; i < answerList.size(); i++){
+
+			String ansText = answerList.get(i).getText().trim();
+			if(ansText.length() > 0){
+				questionString += "" + (i+1) + ") " + answerList.get(i).getText() + "\n";
+			}
+		}
+
+		return questionString;
+
+	}
+
+
+}
