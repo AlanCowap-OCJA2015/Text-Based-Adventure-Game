@@ -1,0 +1,45 @@
+DUNGEON CRAWLER : total time 7h 15 mins
+							Breaks: 1h 10 mins
+							Working time 6 10 mins hrs 
+								Design 50 mins
+								Code & Test 4 hrs 50 mins
+									- menu
+									- loading from file
+									- coding generator
+									- implementing generator in menu
+									- playable encounters
+								Pre-demo preparation 30 mins
+
+- DESIGN Dungeon Crawler = 50 mins
+	- Console based game.
+	- Tree-type plot where user picks what to do and based on the choice, something other happens
+	- All the stuff is loaded from text file
+		- Design an application that will be reading from file and interpreting the code to be used.
+
+	- character
+		- strength, dexterity
+	- Encounter creatures and "chests" with stuff
+	- Fight, find/heals, find/equippables, travel, backpack
+
+	LOADABLE FROM FILE:
+	- creatures 
+		- loadable from file
+		- have strength and dexterity
+		- have chance to appear
+
+	- chests + chance of appearance
+		- loadable from file
+		- have list of items
+		- every item has a chance of appearance
+
+	- fights
+		- attacks - dexterity + d20(if d20 = 20 - always hit, if 1 - miss)
+		- both creature and player attack at same time
+		- if after attack player or creature has no life, encounter ends
+
+	- backpack
+
+- CODE + TEST As You Go
+
+- 2:30 workable version, some additions left
+- Demo - 3:15
