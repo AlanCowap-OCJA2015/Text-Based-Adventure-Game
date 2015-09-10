@@ -5,6 +5,34 @@ public class Player{
 	private int energy;
 	private int luck;
 
+	public String getPlayerType(){
+		return this.playerType;
+	}
+
+	public int getHp(){
+		return this.hp;
+	}
+
+	public int getEnergy(){
+		return this.energy;
+	}
+
+	public int getLuck(){
+		return this.Luck;
+	}
+
+	public void setHp(int hp){
+		this.hp = hp;
+	}
+
+	public void setEnergy(int nrg){
+		this.energy = nrg;
+	}
+
+	public void setLuck(int luckyDuck){
+		this.luck = luckyDuck;
+	}
+
 	
 	Player(String type){
 
@@ -24,5 +52,3 @@ public class Player{
 
 
 }
-
-public
