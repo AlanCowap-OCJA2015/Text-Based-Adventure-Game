@@ -1,0 +1,53 @@
+1:
+Some text describing the situation
+//
+OptionOne @GOTO 2
+OptionTwo @GOTO 3
+OptionThree @GOTO 2
+//
+2:
+Some text on multiple lines
+describing the situation
+//
+@GOTO 3
+//
+3:
+Some text describing the situation
+//
+END
+
+
+
+
+
+
+
+
+As you can see in the above example of an adventure document, the format is as follows
+
+A number followed by a colon(:) e.g. 1:
+This represents the situation's ID.
+
+Some text to display to the player about the current situation they are in,
+This can be a many lines as you like and will end with a line containing //
+
+The lines following the // are the option lines. Each line will represent a single option,
+the options are in the format
+text @GOTO NextSituationID
+
+There must always be at least one option line, however you can have as many as you choose.
+
+If you wish to automatically proceed from one situation to another without user input, 
+use the format
+@GOTO NextSituationID
+
+Should you wish a situation to end the game, 
+you should give the situation an option line containing
+only the word "END"
+
+When you have finished adding options for a situation, add // to the following line.
+This is not required for the final option in the document.
+
+Note: 
+@GOTO is case sensitive
+END is case sensitive
