@@ -4,7 +4,10 @@ public class Player{
 	private int hp;
 	private int energy;
 	private int luck;
+	private boolean hasWeapon = true;
 	private ArrayList<String> inventory = new ArrayList<String>();
+
+	//...getters n' setters
 
 	public String getPlayerType(){
 		return this.playerType;
@@ -34,11 +37,16 @@ public class Player{
 		this.luck = luckyDuck;
 	}
 
-	public String listInventory(){	
+	public void listInventory(){	
 
 		for(String s : inventory){
 			System.out.println(s);
 		}	
+	}
+	
+	public void giveWeapon(String weapon){
+		this.hasWeapon = true;
+		this.inventory.add(weapon);
 	}
 
 	public void addItem(String str){
