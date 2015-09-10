@@ -2,7 +2,7 @@ public class Player{
 
 	private String playerType;
 	private int hp;
-	private int energy;
+	private int defense;
 	private int luck;
 	private boolean hasWeapon = true;
 	private ArrayList<String> inventory = new ArrayList<String>();
