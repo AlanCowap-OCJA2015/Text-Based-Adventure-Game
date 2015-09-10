@@ -43,6 +43,7 @@ public class Player{
 
 	public void addItem(String str){
 		this.inventory.add(str);
+		this.energy = this.energy -10;//more items is more weight
 	}
 
 	
