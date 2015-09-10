@@ -67,5 +67,39 @@ public class Game{
 			System.out.println("Not a valid option please enter either 1 or 2:");
 		}
 	}
+	
+	public void traverse(){
+
+	Random rand = new Random(System.in);
+	
+	choice = rand.nextInt(11);
+
+	if(choice%2=0 && Player.luck < 5){
+		
+		encounterType = rand.nextInt(encounters.size())
+
+		System.out.println("You've encountered a " + encounters.get(encounterType) + " !!!");
+
+		if(Player.defense > Life.attack){
+
+			System.out.println("You are stronger and fight off the " + encounters.get(encounterType)
+			+ " ,you only drop 1 health point : " + Player.hp);
+			Player.hp = Player.hp -1;	
+			
+		}else{
+
+			System.out.println("You are weaker and the " + encounters.get(encounterType) + " defeats you...");
+			int battleres = Life.attack - Player.defense;
+			Player.hp = Player.hp-battleres;
+			System.out.println("You drop " + battleres + " health points" )
+		}
+
+	}else{
+		System.out.println("Your journey was quiet, continue...")
+	
+	} 
+
+
+}
 
 }
