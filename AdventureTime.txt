@@ -14,7 +14,53 @@ continue on or try Ruby City?
 Go to index 4*
 Go to index 3#
 3. You have choosen to try Ruby City. This was fool move, not all that glitters is gold and you became lost and 
-
 hungry, before collapsing on the ground and dying.*
+-1*
+-1#
+4. You are not put off by other people's lack of commitment and continue to travel down the path. It isn't long 
+until you encounter another crossroads beside a stream. There is a beautiful girl washing her hair there, which 
+strikes you as unusual, since there is no sign of a house nearby. Do you disturb her and ask for directions or 
+avoid her and take the furthest path from her?
+1. Ask directions
+2. Avoid her*
+Go to index 5*
+Go to index 6#
+5. As you approach her, her beauty becomes more riveting and you forget what you wanted to say. She smiles at you 
+speaking, "my name is Ilae, won't you join me?." Sitting beside her seems to be the best thing ever. She points 
+into the water to show you something. When you lean forward to get a better view she dunks your head under water 
+and drowns you! Congratulations you're dead!*
+-1*
+-1#
+6. Your momma didn't raise no fool! You avoid her and take the path furthest from her, she is out of sight when the 
+path forest brightens and birdsong can be heard. Flowers line the path and you smile as you continue your journey. 
+Down the road you encounter a shimmering tree, the edges hazy and you can't quite make out much detail. Do you want 
+to ignore it and continue or peer closer?
+1. Ignore it
+2. Have a closer look*
+Go to index 7*
+Go to Index 8#
+7. This seems as dangerous as that woman, and you hurry your footsteps. Your feet are starting to hurt and you are 
+starting to get annoyed by all the distractions. You left the farm to get a job and if it's the last thing you do 
+you are getting a job! Before you on the road you spot a gnome. He smiles at you from under his tall pointed red 
+hat. "Adventurer, hark, it is a good day. Join me for a spell and we shall ease our aches before continuing on." 
+Will you join him?
+1. You are fed up and have had enough. Beat him into submission and continue on your journey
+2. It would be nice to let your feet rest, sit and chat*
+Go to index 9*
+Go to index 10#
+8. Looking closer, you are surprised to hear a voice, "Traveller from far away, long ago has it been since I had 
+company. Talk to me a spell and 
+1. The voice sounds lonely, so you sit beside him to talk
+2. You have no time in your quest, apologise and move on quickly*
+7*
+10#
+9. Tired and weary, you emerge from Coding Forest to see Java City spread out before you. It doesn't take you long 
+after entering the gates to find the job you were looking for. It's small and not much, but better than the farm. 
+Besides it will be another adventure to advance...*
+-1*
+-1#
+10. You decide to join your new friend, sitting down beside him. Before long you get tired, it has been a while 
+since you started your journey. Your friend tells you he will watch out, while you sleep. Too bad it is a sleep you 
+never wake up from again.*
 -1*
 -1#
