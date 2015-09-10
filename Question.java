@@ -31,7 +31,7 @@ public class Question{
 	Question(String q1, int option1, int option2){
 	
 		this.setQuestion(q1) ;
-		this.setOpt1(option2);
+		this.setOpt1(option1);
 		this.setOpt2(option2);
 	}
 
