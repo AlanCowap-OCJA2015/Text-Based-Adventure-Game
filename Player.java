@@ -51,7 +51,7 @@ public class Player{
 
 	public void addItem(String str){
 		this.inventory.add(str);
-		this.energy = this.energy -10;//more items is more weight
+		this.energy = this.energy -1;//more items is more weight
 	}
 
 	
@@ -60,11 +60,11 @@ public class Player{
 		this.playerType = playerType;
 
 		switch(playerType){
-		case "Warrior" : this.playerType="Warrior".this.hp = 100.this.energy = 50.this.luck = 50.inventory.add(War Hammer); break;
-		case "Mage" : this.playerType = "Mage".this.hp = 80.this.energy = 80.this.luck = 75.inventory.add(Staff); break;
-		case "Ninja" : this.playerType = "Ninja".this.hp = 90.this.energy = 100.this.luck = 50.inventory.add(Throwing Star); break;
-		case "Athlete" : this.playerType = "Athlete".this.hp = 80.this.energy = 100.this.luck = 50.inventory.add(Knife); break;
-		default : this.playerType = "Wanderer".this.hp = 50.this.energy = 50.this.luck = 50.inventory.add(Spoon); break;
+		case "Warrior" : this.playerType="Warrior".this.hp = 10.this.energy = 5.this.luck = 5.inventory.add(War Hammer); break;
+		case "Mage" : this.playerType = "Mage".this.hp = 8.this.energy = 8.this.luck = 7.inventory.add(Staff); break;
+		case "Ninja" : this.playerType = "Ninja".this.hp = 9.this.energy = 10.this.luck = 5.inventory.add(Throwing Star); break;
+		case "Athlete" : this.playerType = "Athlete".this.hp = 8.this.energy = 10.this.luck = 5.inventory.add(Knife); break;
+		default : this.playerType = "Wanderer".this.hp = 5.this.energy = 5.this.luck = 5.inventory.add(Spoon); break;
 
 		}
 
