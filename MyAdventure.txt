@@ -1,0 +1,58 @@
+1:
+You stand at the entrance to a cave, enter?
+//
+Yes @GOTO 2
+No @GOTO 3
+//
+2:
+You entered the cave, it's dark and almost impossible to tell where you are going.
+What do you do?
+//
+Continue @GOTO 5
+Turn Back @GOTO 4
+//
+3:
+You decided not to enter the cave and walked in the direction of a nearby village.
+Upon getting closer to the village, you notice large amounts of smoke.
+You..
+//
+Help @GOTO 6
+Flee @GOTO 7
+//
+4:
+You try to leave the cave but you can no longer find your way.
+You decide to..
+//
+Call for help @GOTO 5
+Continue walking @GOTO 5
+//
+5:
+You hear what sounds like a large animal charging.
+You..
+//
+Attempt to flee the cave @GOTO 8
+Rush further into the cave @GOTO 8
+//
+6:
+Upon rushing into the village you see three large orks chasing fleeing villagers.
+As you step forward you are hit forcefully from behind and lose consciousness.
+//
+@GOTO 999
+//
+7:
+You flee the village but a large ork chases after you.
+It's too fast for you to get away.
+You are hit forcefully and lose consciousness.
+//
+@GOTO 999
+//
+8:
+You feel a large weight crush you.
+//
+@GOTO 999
+//
+999:
+You have died.
+Game Over.
+//
+END
