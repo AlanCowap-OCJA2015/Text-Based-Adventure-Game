@@ -8,16 +8,20 @@ public class JourneyOfAChampion {
 	}
 
 	public void loadGame ( ) {
-		Player p = new Player(5, 10, "Glorious Pumpkin");
+		Player player = new Player(5, 10, "Glorious Pumpkin");
 
 		System.out.println("\t");
 		System.out.println("\tWelcome to the Journey of a Champion!");
-		System.out.println("\t" + p.toString());
+		System.out.println("\t" + player.toString());
 
 
 		//Loads the file and displays it
 		FileLoader fl = new FileLoader("C:/java/CodeChallengeGame/Dialogues.txt");
 		System.out.println(fl.toString());
+
+		//test with dialogue
+		Dialogue dialogue = new Dialogue(fl.toString() , player.getName(), "Stranger");
+		System.out.println(dialogue.getOption("5"));
 	}
 
 }
