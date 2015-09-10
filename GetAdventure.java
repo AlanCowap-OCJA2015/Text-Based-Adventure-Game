@@ -22,11 +22,10 @@ public class GetAdventure{
 			while(scan.hasNext()){
 				String info = scan.next();
 				String[] breakdown = info.split("\\*");
-				
 				String text = breakdown[0];
 				int opt1 = Character.getNumericValue(breakdown[1].charAt((breakdown[1].length() - 1)));
 				int opt2 = Character.getNumericValue(breakdown[2].charAt((breakdown[2].length() - 1)));
-				choices.add(new Question(text, opt1, opt2));
+				choices.add(new Question(text, --opt1, --opt2));
 			}
 			return choices;
 		}
