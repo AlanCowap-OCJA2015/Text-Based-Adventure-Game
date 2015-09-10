@@ -1,22 +1,70 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class GameApp{
+public class Game{
 
-	public static void main(String[] args){
-		System.out.println("Hello Choose your own adventure");
-			
+	private ArrayList<Question> path = new ArrayList<Question>();
+	private ArrayList<Life> encounters = new ArrayList<Life>();
+
+	public Game(String fileName){
 		GetAdventure adventure = new GetAdventure();
-		ArrayList<Question> choices = null;
+		path = adventure.readFile(fileName);
+	}
 
-		Scanner scan = new Scanner(System.in);
-		System.out.println("Please enter the name of the adventure (file) you wish to play?" 
-				+ "\nLeave blank for default adventure");
-		String fileName = scan.nextLine();
+	public void playGame(){
 
-		choices = adventure.readFile(fileName);
-		for(Question q:choices){
-			System.out.println(q.getQuestion());
+		chooseMove(path.get(0));
+
+	}
+
+	public void chooseMove(Question quest){
+		if(quest.getOpt1() > 0){
+			Scanner scan = new Scanner(System.in);
+			System.out.println(quest.getQuestion());
+			System.out.print("Which option do you pick?");
+			validateInput(scan);
+			int choice = scan.nextInt();
+
+			switch(choice){
+				case 1: chooseMove(path.get(quest.getOpt1())); break;
+				case 2: chooseMove(path.get(quest.getOpt2())); break;
+				default: break;
+			}
+		}
+		else{
+			System.out.println(quest.getQuestion());
+			System.out.println("Congratulation, you have completed your quest, "
+				+ " and killed all enemies. Live long and prosper!");
+			System.exit(0);
+		}
+	}
+
+	public void generateEncounters(int numEncounters){
+		Scanner scanEncounter = new Scanner(System.in);
+		for(int i = 0; i < numEncounters; ++i){
+			System.out.println("What is the type of encounter?");
+			String type = scanEncounter.next();
+			System.out.println("How much health should " + type + " have?");
+			validateInput(scanEncounter);
+			int health = scanEncounter.nextInt();
+			System.out.println("How much attack power should " + type + " have?");
+			validateInput(scanEncounter);
+			int attack = scanEncounter.nextInt();
+			System.out.println("How likely is " + type + " to appear?");
+			validateInput(scanEncounter);
+			int luck = scanEncounter.nextInt();
+			
+			encounters.add(new Life(type, health, attack, luck));
+			
+		}
+		System.out.println("");
+		
+	}
+
+	private void validateInput(Scanner scan){
+		while(!scan.hasNextInt()){
+			scan.next();
+			System.out.println("Not a valid option please enter either 1 or 2:");
 		}
 	}
 
