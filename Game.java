@@ -76,7 +76,7 @@ public class Game{
 
 	if(choice%2=0 && Player.luck < 5){
 		
-		encounterType = rand.nextInt(encounters.size())
+		encounterType = rand.nextInt(encounters.size());
 
 		System.out.println("You've encountered a " + encounters.get(encounterType) + " !!!");
 
