@@ -1,6 +1,6 @@
 // < means someone is speaking to player
 // > means player options to reply to someone
-// ¬ means move to the next option in the dialogue
+// ¬<number> means move to the next option in the dialogue
 // ¬END means it's last speech, ends the dialog
 
 1<Hello Stranger! - 'You see a man on crutches, he has no left leg'.
