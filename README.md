@@ -57,6 +57,10 @@ There will be four main contexts:
 
 @verb - A word that the player can use to trigger an action which implements this verb
 
+@variable - Define a variable specific to object, direction, location or action
+
+@if - Perform an action (game action or internally) according to a variable status.
+
 @action - A specific action available at this location
 
 @action_description - A description to be shown when doing performing the action
@@ -74,7 +78,9 @@ There will be four main contexts:
 @item - Make an item available at a location
 
 @direction - A direction available at a location
-               
+
+#### Keyword context matrix
+
 | Initialiaser             | Action | Direction | Item | Location | 
 | ------------------------ | ------ | --------- | -----| -------- |
 | @description             |    X   |     X     |   X  |     X    |
@@ -87,6 +93,8 @@ There will be four main contexts:
 | @noun                    |        |           |      |          |
 | @item                    |        |           |      |          |
 | @direction               |        |           |      |          |
+| @variable                |    X   |     X     |   X  |     X    |
+| @if                      |    X   |     X     |   X  |     X    |
 
 #### Node hierarchy
 
@@ -99,6 +107,10 @@ There will be four main contexts:
   @action_on_description - Description when doing this action on something
 
   @needs_noun - If used, an error message for when verb is used with no noun
+  
+  @if - Perform an activity based on the status of a variable of this action
+  
+  @variable - Set a variable local to this action
 
 ##### @direction_id
 
@@ -106,6 +118,10 @@ There will be four main contexts:
 
   @noun - Nouns to be used by player for this direction, e.g. “E, EAST”
 
+  @if - Perform an activity based on the status of a variable of this direction
+  
+  @variable - Set a variable local to this direction
+  
 ##### @location_id
 
   @description - The description for this location
@@ -115,6 +131,10 @@ There will be four main contexts:
   @item - Items initially at this location
 
   @direction - A direction out of this location
+
+  @if - Perform an activity based on the status of a variable of this location
+  
+  @variable - Set a variable local to this location
 
 ##### @item_id
 
@@ -126,3 +146,6 @@ There will be four main contexts:
 
   @actions_with - Actions which can be performed with this item
 
+  @if - Perform an activity based on the status of a variable of this item
+  
+  @variable - Set a variable local to this item
