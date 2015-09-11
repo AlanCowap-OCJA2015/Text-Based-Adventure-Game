@@ -1,0 +1,70 @@
+START
+
+BOUTCOME 0
+QUESTION Who are you?
+ANSWER A mage
+EOUTCOME 1
+ANSWER A warlock
+EOUTCOME 2
+ANSWER A warrior
+EOUTCOME 3
+ANSWER A paladin
+EOUTCOME 4
+BREAK
+
+BOUTCOME 1
+QUESTION Ahh a mage, I have heard you have a fondness for sheep
+ANSWER WHO TOLD YOU THAT?!
+EOUTCOME 11
+ANSWER Watch your tongue boy
+EOUTCOME 12
+ANSWER That's between a man and his sheep
+EOUTCOME 13
+BREAK
+
+BOUTCOME 2
+QUESTION Ahh a warlock, how about them dark arts?
+ANSWER That's Snape you idiot
+EOUTCOME 21
+ANSWER Avada Kedavra bitch
+EOUTCOME 22
+ANSWER BOO!
+EOUTCOME 23
+BREAK
+
+BOUTCOME 3
+QUESTION Ahh a warrior, looks like you've been using your face for a shield
+ANSWER I'll use your face for a chopping block if you keep it up
+EOUTCOME 31
+ANSWER AXE!
+EOUTCOME 32
+ANSWER *Kill him*
+EOUTCOME 0
+BREAK
+
+BOUTCOME 4
+QUESTION Ahh a paladin, how about a blessing?
+ANSWER How about you shut up
+EOUTCOME 41
+ANSWER Bless you
+EOUTCOME 42
+ANSWER *Bubble hearth away*
+EOUTCOME 43
+BREAK
+
+BOUTCOME 33
+QUESTION I'm gonna mess you up son
+ANSWER FINISH HIM!
+EOUTCOME -1
+ANSWER have mercy
+EOUTCOME -1
+BREAK
+
+ENEMYSTART
+FIGHT 33
+NAME Alex
+HP 100
+XP 100
+ATTACK 100
+LOOT A bone
+ENEMYEND

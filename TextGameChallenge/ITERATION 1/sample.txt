@@ -1,0 +1,19 @@
+START
+BOUTCOME 0
+QUESTION hello
+ANSWER 1 answer one
+ANSWER 2 answer two
+ANSWER 3 answer three
+BREAK
+BOUTCOME 1
+QUESTION is it me
+ANSWER 1 answer one
+ANSWER 2 answer two
+ANSWER 3 answer three
+BREAK
+BOUTCOME 2
+QUESTION you're looking for?
+ANSWER 1 answer one
+ANSWER 2 answer two
+ANSWER 3 answer three
+BREAK

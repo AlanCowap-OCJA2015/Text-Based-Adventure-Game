@@ -1,0 +1,40 @@
+START
+BOUTCOME 0
+QUESTION Who are you?
+ANSWER A mage
+EOUTCOME 1
+ANSWER A warlock
+EOUTCOME 2
+ANSWER A warrior
+EOUTCOME 3
+BREAK
+
+BOUTCOME 1
+QUESTION Ahh a mage, I have heard you have a fondness for sheep
+ANSWER WHO TOLD YOU THAT?!
+EOUTCOME 11
+ANSWER Watch your tongue boy
+EOUTCOME 22
+ANSWER That's between a man and his sheep
+EOUTCOME 33
+BREAK
+
+BOUTCOME 2
+QUESTION Ahh a warlock, how about them dark arts?
+ANSWER That's Snape you idiot
+EOUTCOME 21
+ANSWER Avada Kedavra bitch
+EOUTCOME 22
+ANSWER BOO!
+EOUTCOME 23
+BREAK
+
+BOUTCOME 3
+QUESTION Ahh a warrior, looks like you've been using your face for a shield
+ANSWER I'll use your face for a chopping block if you keep it up
+EOUTCOME 31
+ANSWER AXE!
+EOUTCOME 32
+ANSWER *Kill him*
+EOUTCOME 33
+BREAK
