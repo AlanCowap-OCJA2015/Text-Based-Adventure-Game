@@ -1,0 +1,59 @@
+#001
+Entrance
+This way leads to the entrance of the house.
+You are in a small hallway. 
+n=#002
+e=#003
+w=#004
+u=#005
+obj=$001
+obj=$002
+obj=$002
+~~
+#002
+Kitchen
+This way leads to the kitchens.
+You are in a well appointed kitchen.
+s=#001
+~~
+#003
+Guard House
+This looks like a Guard barracks of some kind.
+You are in a run down Guard House, there are cobwebbs everywhere.
+n=#004
+w=#001
+obj=$001
+obj=$002
+obj=$002
+~~
+#004
+Prison
+You see cages ahead.
+You are in a Prison with rusting cages.
+n=#007
+w=#006
+s=#003
+obj=$001
+obj=$002
+obj=$002
+~~
+#005
+Attic
+The ladder to the attic looks old and worn. It might not be a good idea to go this way. 
+The floor creaks under you. You may want to go back down.
+d=#001
+~~
+#006
+Court Yard
+You see an open area ahead.
+You are in an old Court yard.
+e=#004
+n=#007
+~~
+#007
+Dump
+You smell something foul from this direction.
+You are in a dump. Flies are everywhere, and are crawling all over you. 
+s=#006
+w=#004
+~~
